@@ -3,10 +3,12 @@
 ArrayListNode	*getALElement(ArrayList *pList, int position)
 {
 	int		max;
+	int		curr;
 	ArrayListNode	*arr;
 
 	max = pList->maxElementCount;
-	if (position > max - 1 || position < 0)
+	curr = pList->currentElementCount;
+	if (position > max - 1 || position < 0 || position > curr - 1)
 		return (NULL);
 	else
 	{
