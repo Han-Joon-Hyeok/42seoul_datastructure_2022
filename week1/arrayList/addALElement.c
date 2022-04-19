@@ -7,12 +7,12 @@ int	addALElement(ArrayList *pList, int position, ArrayListNode element)
 	int	reps;
 	ArrayListNode *array;
 
-	if (isArrayListFull(pList) || position < 0)
+	curr = pList->currentElementCount;
+	max = pList->maxElementCount;
+	if (isArrayListFull(pList) || position < 0 || position > max - 1)
 		return (FALSE);
 	else
 	{
-		curr = pList->currentElementCount;
-		max = pList->maxElementCount;
 		array = pList->pElement;
 		if (position > curr - 1 && curr < max - 1)
 			*(array + curr) = element;
