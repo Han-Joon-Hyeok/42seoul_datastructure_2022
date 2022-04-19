@@ -1,13 +1,14 @@
 NAME := arraylist.a
 
 SRCS := addALElement.c \
-	    clearArrayList.c \
-		createArrayList.c \
-	    deleteArrayList.c \
-		displayArrayList.c \
-		getArrayListLength.c \
-		isArrayListFull.c \
-		removeALElement.c
+	clearArrayList.c \
+	createArrayList.c \
+    	deleteArrayList.c \
+	displayArrayList.c \
+	getALElement.c \
+	getArrayListLength.c \
+	isArrayListFull.c \
+	removeALElement.c
 
 OBJS := $(SRCS:%.c=%.o)
 
