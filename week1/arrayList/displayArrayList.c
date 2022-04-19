@@ -11,8 +11,8 @@ void displayArrayList(ArrayList* pList)
 	cur = pList->currentElementCount;
 	arr = pList->pElement;
 	
-	printf("max%d\n", max);
-	printf("cur%d\n", cur);
+	printf("max: %d\n", max);
+	printf("cur: %d\n", cur);
 	for(int i=0; i < cur; i++)
 	{
 		printf("%d", (arr + i)->data);
