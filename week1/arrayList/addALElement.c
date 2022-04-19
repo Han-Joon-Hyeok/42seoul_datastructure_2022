@@ -9,7 +9,7 @@ int	addALElement(ArrayList *pList, int position, ArrayListNode element)
 
 	curr = pList->currentElementCount;
 	max = pList->maxElementCount;
-	if (isArrayListFull(pList) || position < 0 || position > max - 1)
+	if (isArrayListFull(pList) || position < 0 || position > curr)
 		return (FALSE);
 	else
 	{
