@@ -6,7 +6,7 @@ int	addLLElement(LinkedList* pList, int position, ListNode element)
 	int		currentNodeCount;
 	ListNode	*newNode;
 	ListNode	*prevNode;
-	ListNode	*nextNode;
+	ListNode	*currNode;
 	
 	currentNodeCount = pList->currentElementCount;
 	if (position < 0 || position > currentNodeCount || !pList)
@@ -24,17 +24,18 @@ int	addLLElement(LinkedList* pList, int position, ListNode element)
 		{
 			i = 0;
 			prevNode = NULL;
-			nextNode = pList->headerNode.pLink;
+			currNode = pList->headerNode.pLink;
 			while (i < position)
 			{
-				prevNode = nextNode;
-				nextNode = nextNode->pLink;
+				prevNode = currNode;
+				currNode = currNode->pLink;
 				i += 1;
 			}
-			if (nextNode != NULL)
-				newNode->pLink = nextNode;
-			if (prevNode != NULL)
+			if (prevNode == NULL)
+				pList->headerNode.pLink = newNode;
+			else
 				prevNode->pLink = newNode;
+			newNode->pLink = currNode;
 		}
 		pList->currentElementCount += 1;
 		return (TRUE);
