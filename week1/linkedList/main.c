@@ -1,44 +1,4 @@
 #include "linkedlist.h"
-int	addLLElement(LinkedList* pList, int position, ListNode element)
-{
-	int		i;
-	int		currentNodeCount;
-	ListNode	*newNode;
-	ListNode	*prevNode;
-	ListNode	*nextNode;
-	
-	currentNodeCount = pList->currentElementCount;
-	if (position < 0 || position > currentNodeCount || !pList)
-		return (FALSE);
-	else
-	{
-		newNode = malloc(sizeof(ListNode));
-		if (!newNode)
-			return (FALSE);
-		newNode->data = element.data;
-		newNode->pLink = element.pLink;
-		if (currentNodeCount == 0)
-			pList->headerNode.pLink = newNode;
-		else
-		{
-			i = 0;
-			prevNode = NULL;
-			nextNode = pList->headerNode.pLink;
-			while (i < position)
-			{
-				prevNode = nextNode;
-				nextNode = nextNode->pLink;
-				i += 1;
-			}
-			if (nextNode != NULL)
-				newNode->pLink = nextNode;
-			if (prevNode != NULL)
-				prevNode->pLink = newNode;
-		}
-		pList->currentElementCount += 1;
-		return (TRUE);
-	}
-}
 
 int	main(void)
 {
@@ -46,16 +6,17 @@ int	main(void)
 	ListNode	node;
 	ListNode	node2;
 	ListNode	node3;
+	ListNode	node4;
 
 	list = createLinkedList();
 	node.data = 1;
 	node2.data = 2;
 	node3.data = 3;
+	node4.data = 4;
 
-	addLLElement(list, 0, node);
-	addLLElement(list, 1, node2);
-	addLLElement(list, 0, node3); // 맨앞 추가하는것도 하기
-
-	removeLLElement(list, 0);
+	addLLElement(list, 0, node);    // TRUE 맨 앞 추가 (빈 리스트) [1]
+	addLLElement(list, 0, node2);   // TRUE 맨 앞 추가             [2, 1]
+	addLLElement(list, 2, node3);   // TRUE 맨 뒤 추가             [2, 1, 3]
+	addLLElement(list, 1, node4);   // TRUE 중간에 추가            [2, 4, 1, 3]
 	return (0);
 }
