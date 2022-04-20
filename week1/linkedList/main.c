@@ -18,5 +18,11 @@ int	main(void)
 	addLLElement(list, 0, node2);   // TRUE 맨 앞 추가             [2, 1]
 	addLLElement(list, 2, node3);   // TRUE 맨 뒤 추가             [2, 1, 3]
 	addLLElement(list, 1, node4);   // TRUE 중간에 추가            [2, 4, 1, 3]
+
+	removeLLElement(list, 0);       // TRUE 맨 앞 제거             [4, 1, 3]
+	removeLLElement(list, 1);       // TRUE 중간 제거              [4, 3]
+	removeLLElement(list, 1);       // TRUE 맨 뒤 제거             [4]
+
+	system("leaks a.out");
 	return (0);
 }
