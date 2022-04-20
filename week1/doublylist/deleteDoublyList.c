@@ -9,6 +9,8 @@ void	deleteDoublyList(DoublyList *pList)
 	while (currNode != NULL)
 	{
 		nextNode = currNode->pRLink;
+		currNode->pLLink = NULL;
+		currNode->pRLink = NULL;
 		free(currNode);
 	}
 	free(pList);
