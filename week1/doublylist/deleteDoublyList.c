@@ -12,6 +12,7 @@ void	deleteDoublyList(DoublyList *pList)
 		currNode->pLLink = NULL;
 		currNode->pRLink = NULL;
 		free(currNode);
+		currNode = nextNode;
 	}
 	free(pList);
 }
