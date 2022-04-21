@@ -10,25 +10,18 @@ void	clearDoublyList(DoublyList *pList)
 		return ;
 	prevNode = NULL;
 	currNode = pList->headerNode.pRLink;
+	pList->headerNode.pRLink = NULL;
 	while (currNode != NULL)
 	{
 		prevNode = currNode->pLLink;
 		nextNode = currNode->pRLink;
-		prevNode->pLLink = NULL;
-		prevNode->pRLink = NULL;
 		currNode->pLLink = NULL;
 		currNode->pRLink = NULL;
-		currNode = nextNode;
 		free(currNode);
+		currNode = nextNode;
 	}
 	pList->currentElementCount = 0;
 }
-// Get the first node of list and set it current node (pList->headerNode.pRLink)
-// Unlink pLRink and pRLink of the current node.
-// Get the next node of current node.
-// Free current node.
-// Iterate 2~4 while current node is not NULL
-// Free pList.
 
 int	main(void)
 {
