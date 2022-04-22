@@ -17,11 +17,11 @@ typedef struct CircularListType
  
 CircularList* createCircularList();
 void deleteCircularList(CircularList* pList);
-int addDLElement(CircularList* pList, int position, CircularListNode element);
-int removeDLElement(CircularList* pList, int position);
+int addCLElement(CircularList* pList, int position, CircularListNode element);
+int removeCLElement(CircularList* pList, int position);
 void clearCircularList(CircularList* pList);
 int getCircularListLength(CircularList* pList);
-CircularListNode* getDLElement(CircularList* pList, int position);
+CircularListNode* getCLElement(CircularList* pList, int position);
 void displayCircularList(CircularList* pList);
 
 #endif
