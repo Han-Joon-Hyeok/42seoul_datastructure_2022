@@ -1,20 +1,5 @@
 #include "circular_linked_list.h"
 
-static	CircularListNode	*getTailNode(CircularList *pList, int listLength)
-{
-	int			i;
-	CircularListNode	*currNode;
-
-	i = 0;
-	currNode = pList->headerNode.pLink;
-	while (i < listLength)
-	{
-		currNode = currNode->pLink;
-		i += 1;
-	}
-	return (currNode);
-}
-
 int	addCLElement(CircularList *pList, int position, CircularListNode element)
 {
 	int			i;
@@ -30,7 +15,7 @@ int	addCLElement(CircularList *pList, int position, CircularListNode element)
 	newNode = (CircularListNode *)malloc(sizeof(CircularListNode));
 	if (!newNode)
 		return (ERROR);
-	newNode->data = 0;
+	newNode->data = element.data;
 	newNode->pLink = NULL;
 	if (listLength == 0)
 	{
@@ -55,14 +40,14 @@ int	addCLElement(CircularList *pList, int position, CircularListNode element)
 			pList->headerNode.pLink = newNode;
 			tailNode->pLink = newNode;
 		}
-		else if (tailNode->pLink == pList->headerNode.pLink)
+		else if (i == listLength) // 맨 끝
 		{
 			newNode->pLink = tailNode->pLink;
 			tailNode->pLink = newNode;
 		}
-		else
+		else					// 중간 삽입
 		{
-			newNode->pLink = currNode->pLink;
+			newNode->pLink = currNode;
 			prevNode->pLink = newNode;
 		}
 	}
