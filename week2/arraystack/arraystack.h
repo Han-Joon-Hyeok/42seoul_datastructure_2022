@@ -17,7 +17,7 @@ typedef struct ArrayStackType
 
 ArrayStack* createArrayStack(int size);
 int pushAS(ArrayStack* pStack, ArrayStackNode element);
-char popAS(ArrayStack* pStack);
+ArrayStackNode* popAS(ArrayStack* pStack);
 ArrayStackNode* peekAS(ArrayStack* pStack);
 void deleteArrayStack(ArrayStack* pStack);
 int isArrayStackFull(ArrayStack* pStack);

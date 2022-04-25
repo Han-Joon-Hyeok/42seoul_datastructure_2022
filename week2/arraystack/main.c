@@ -10,7 +10,7 @@ int main(void)
     ArrayStackNode  node3;
     ArrayStackNode  node4;
     ArrayStackNode  *peek;
-    char  pop;
+    ArrayStackNode*  pop;
     int  result;
 
 	size = 3;
@@ -28,11 +28,11 @@ int main(void)
 	// printf("isArrayStackEmpty: %d\n", isArrayStackEmpty(stack));
 	// result = pushAS(stack, node4);		// FALSE
 	// printf("%d\n", result);
-	// pop = popAS(stack);
+	pop = popAS(stack);
     // displayArrayStack(stack);
     // printf("-------------------------\n");
 	// peek = peekAS(stack);
-    // displayArrayStack(stack);     // 'a' 'b'
+    displayArrayStack(stack);     // 'a' 'b'
     // printf("peek : %c\n", peek->data);  // 'b'
     // printf("pop  : %c\n", pop);   // 'c'
 	deleteArrayStack(stack);
