@@ -7,7 +7,7 @@
 #define NUM_DIRECTIONS 4
 #define ERROR	-1
 #define START	-10
-#define	END 10
+#define	END		10
 
 // offset: x, y
 static int DIRECTION_OFFSETS[NUM_DIRECTIONS][2] = {
