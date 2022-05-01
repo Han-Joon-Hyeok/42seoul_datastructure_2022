@@ -8,6 +8,6 @@ ArrayQueueNode *dequeueAQ(ArrayQueue* pQueue)
         return (0);
     pQueue->currentElementCount -= 1;
     node = &pQueue->pElement[pQueue->front];
-    pQueue->front = ++pQueue->front % pQueue->maxElementCount;
+    pQueue->front += 1;
     return (node);
 }
