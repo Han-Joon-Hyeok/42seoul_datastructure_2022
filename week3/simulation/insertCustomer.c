@@ -12,5 +12,8 @@ void insertCustomer(int arrivalTime, int processTime, LinkedQueue *pQueue)
     customer->data.status = arrival;
     customer->data.arrivalTime = arrivalTime;
     customer->data.processTime = processTime;
+    customer->data.endTime = processTime;
+    customer->data.startTime = 0;
+    customer->data.recent = 0;
     enqueueLQ(pQueue, *customer);
 }
