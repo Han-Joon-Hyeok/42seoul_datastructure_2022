@@ -6,5 +6,6 @@ typedef struct SimCustomerType
     int processTime;        
     int startTime;      
     int endTime;        
+    int recent;
 } SimCustomer;
 
