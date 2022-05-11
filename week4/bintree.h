@@ -2,6 +2,7 @@
 #define _BIN_TREE_
 
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct BinTreeNodeType
 {
@@ -25,6 +26,11 @@ BinTreeNode* getLeftChildNodeBT(BinTreeNode* pNode);
 BinTreeNode* getRightChildNodeBT(BinTreeNode* pNode);
 void deleteBinTree(BinTree* pBinTree);
 void deleteBinTreeNode(BinTreeNode* pNode);
+
+// traversals
+void	preOrderTraversal(BinTree *pBinTree);
+void    inOrderTraversal(BinTree *pBinTree);
+void    postOrderTraversal(BinTree *pBinTree);
 
 #endif
 
