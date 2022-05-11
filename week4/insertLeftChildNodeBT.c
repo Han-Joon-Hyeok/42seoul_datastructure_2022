@@ -2,7 +2,7 @@
 
 BinTreeNode* insertLeftChildNodeBT(BinTreeNode* pParentNode, BinTreeNode element)
 {
-	if (pParentNode == NULL || pParentNode->pLeftChild)
+	if (pParentNode == NULL || pParentNode->pLeftChild != NULL)
 		return (NULL);
 	pParentNode->pLeftChild = malloc(sizeof(BinTreeNode));
 	if (pParentNode->pLeftChild == NULL)
