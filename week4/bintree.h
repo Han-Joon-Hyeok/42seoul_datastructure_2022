@@ -1,6 +1,8 @@
 #ifndef _BIN_TREE_
 #define _BIN_TREE_
 
+#include <stdlib.h>
+
 typedef struct BinTreeNodeType
 {
 	char data;
