@@ -8,12 +8,13 @@ BinTree* makeBinTree(BinTreeNode rootNode)
 	tree = malloc(sizeof(BinTree));
 	if (tree == NULL)
 		return (NULL);
-	newRootNode = malloc(sizeof(rootNode));
+	newRootNode = malloc(sizeof(BinTreeNode));
 	if (newRootNode == NULL)
 		return (NULL);
 	*newRootNode = rootNode;
 	newRootNode->visited = FALSE;
 	newRootNode->pLeftChild = NULL;
 	newRootNode->pRightChild = NULL;
-	return (newRootNode);
+	tree->pRootNode = newRootNode;
+	return (tree);
 }
