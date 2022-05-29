@@ -20,9 +20,12 @@ int checkVertexValid(LinkedGraph* pGraph, int vertexID);
 ListNode*	searchVertexID(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
 int addVertexLG(LinkedGraph* pGraph, int vertexID);
 int addEdgeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
+int addEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
 int addEdgewithWeightLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID, int weight);
+int addEdgeNodewithWeightLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID, int weight);
 int removeVertexLG(LinkedGraph* pGraph, int vertexID);
 int removeEdgeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
+int removeEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
 void deleteLinkedGraph(LinkedGraph* pGraph);
 void displayLinkedGraph(LinkedGraph* pGraph);
 

@@ -15,13 +15,8 @@ int addEdgewithWeightLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID, i
         printf("toVertexID is not valid!\n");
         return (ERROR);
     }
-    if (pGraph->ppAdjEdge[fromVertexID][toVertexID] >= 1)
-    {
-        printf("Edge already exists!\n");
-        return (FAIL);
-    }
-    pGraph->ppAdjEdge[fromVertexID][toVertexID] = weight;
+    addEdgeNodewithWeightLG(pGraph, fromVertexID, toVertexID, weight);
     if (pGraph->graphType == GRAPH_UNDIRECTED)
-        pGraph->ppAdjEdge[toVertexID][fromVertexID] = weight;
+        addEdgeNodewithWeightLG(pGraph, toVertexID, fromVertexID, weight);
     return (SUCCESS);
 }

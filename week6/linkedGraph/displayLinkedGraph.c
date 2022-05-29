@@ -3,7 +3,8 @@
 
 void displayLinkedGraph(LinkedGraph* pGraph)
 {
-    char    *graphType;
+    char        *graphType;
+    ListNode    *node;
 
     graphType = "UNDIRECTED";
     if (pGraph->graphType == GRAPH_DIRECTED)
@@ -14,11 +15,15 @@ void displayLinkedGraph(LinkedGraph* pGraph)
     printf("🌲 Current Graph Edges\n");
     for (int i = 0; i < pGraph->maxVertexCount; i++)
     {
-        for (int j = 0; j < pGraph->maxVertexCount; j++)
-            printf("%d ", pGraph->ppAdjEdge[i][j]);
+        node = pGraph->ppAdjEdge[i]->headerNode.pLink;
+        while (node)
+        {
+            printf("%d ", node->data.vertexID);
+            node = node->pLink;
+        }
         printf("\n");
     }
-    printf("\n🍺 Current Graph Vertexs\n");
+    printf("\n🍺 Current Graph Vertexes\n");
     for (int i = 0; i < pGraph->maxVertexCount; i++)
         printf("%d ", pGraph->pVertex[i]);
     printf("\n");

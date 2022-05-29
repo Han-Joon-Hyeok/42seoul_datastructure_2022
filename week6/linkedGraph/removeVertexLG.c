@@ -6,7 +6,7 @@ int removeVertexLG(LinkedGraph* pGraph, int vertexID)
 
     if (pGraph == NULL || vertexID < 0 || vertexID > pGraph->maxVertexCount - 1)
         return (ERROR);
-    if (pGraph->pVertex[vertexID] == NOT_USED || isEmptyAG(pGraph))
+    if (pGraph->pVertex[vertexID] == NOT_USED || isEmptyLG(pGraph))
         return (FAIL);
     pGraph->pVertex[vertexID] = NOT_USED;
     i = 0;

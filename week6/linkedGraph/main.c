@@ -21,7 +21,7 @@ int main(void)
 
     ugraph = createLinkedGraph(4);
 
-    displayArrayGraph(ugraph);
+    displayLinkedGraph(ugraph);
 
     addVertexLG(ugraph, 0);
     addVertexLG(ugraph, 1);

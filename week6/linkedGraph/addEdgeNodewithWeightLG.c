@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "graphlinkedlist.h"
 
-int addEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID)
+int addEdgeNodewithWeightLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID, int weight)
 {
     ListNode    *prevNode;
     ListNode    *currNode;
@@ -18,13 +18,6 @@ int addEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID)
         prevNode = currNode;
         currNode = currNode->pLink;
     }
-    currNode = malloc(sizeof(ListNode));
-    if (currNode == NULL)
-        return (ERROR);
-    currNode->data.vertexID = toVertexID;
-    if (prevNode == NULL)
-        pGraph->ppAdjEdge[fromVertexID]->headerNode.pLink = currNode;
-    else
-        prevNode->pLink = currNode;
+    currNode->data.weight = weight;
     return (SUCCESS);
 }
