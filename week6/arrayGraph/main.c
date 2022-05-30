@@ -19,20 +19,22 @@ int main(void)
 
 */
 
-    ugraph = createArrayGraph(4);
+    // ugraph = createArrayGraph(4);
 
-    displayArrayGraph(ugraph);
+    // displayArrayGraph(ugraph);
 
-    addVertexAG(ugraph, 0);
-    addVertexAG(ugraph, 1);
-    addVertexAG(ugraph, 2);
-    addVertexAG(ugraph, 3);
+    // addVertexAG(ugraph, 0);
+    // addVertexAG(ugraph, 1);
+    // addVertexAG(ugraph, 2);
+    // addVertexAG(ugraph, 3);
 
-    addEdgeAG(ugraph, 0, 1);
-    addEdgeAG(ugraph, 0, 3);
-    addEdgeAG(ugraph, 1, 2);
-    addEdgeAG(ugraph, 1, 3);
-    displayArrayGraph(ugraph);
+    // addEdgeAG(ugraph, 0, 1);
+    // addEdgeAG(ugraph, 0, 3);
+    // addEdgeAG(ugraph, 1, 2);
+    // addEdgeAG(ugraph, 1, 3);
+    // displayArrayGraph(ugraph);
+    // arrayGraphDfs(ugraph);
+    // arrayGraphBfs(ugraph);
 
 /*
 
@@ -42,13 +44,13 @@ int main(void)
         [0, 1, 0, 0],
         [1, 0, 0, 1],
         [0, 0, 0, 0],
-        [1, 0, 0, 0],
+        [1, 0, 1, 0],
     ]
 
 */
     dgraph = createArrayDirectedGraph(4);
 
-    displayArrayGraph(dgraph);
+    // displayArrayGraph(dgraph);
 
     addVertexAG(dgraph, 0);
     addVertexAG(dgraph, 1);
@@ -59,9 +61,11 @@ int main(void)
     addEdgeAG(dgraph, 1, 0);
     addEdgeAG(dgraph, 1, 3);
     addEdgeAG(dgraph, 3, 1);
-
+    addEdgeAG(dgraph, 3, 2);
     displayArrayGraph(dgraph);
-    deleteArrayGraph(ugraph);
-    deleteArrayGraph(dgraph);
+    // arrayGraphDfs(dgraph);
+    arrayGraphBfs(dgraph);
+    // deleteArrayGraph(ugraph);
+    // deleteArrayGraph(dgraph);
     return (0);
 }

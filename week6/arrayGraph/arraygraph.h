@@ -24,6 +24,9 @@ int removeVertexAG(ArrayGraph* pGraph, int vertexID);
 int removeEdgeAG(ArrayGraph* pGraph, int fromVertexID, int toVertexID);
 void deleteArrayGraph(ArrayGraph* pGraph);
 void displayArrayGraph(ArrayGraph* pGraph);
+void arrayGraphDfs(ArrayGraph *pGraph);
+void arrayGraphBfs(ArrayGraph *pGraph);
+
 #endif
 
 #ifndef _COMMON_GRAPH_DEF_
@@ -41,4 +44,7 @@ void displayArrayGraph(ArrayGraph* pGraph);
 
 #define GRAPH_UNDIRECTED	1
 #define GRAPH_DIRECTED		2
+
+#define VISITED				1
+#define NOT_VISITED			0
 #endif
