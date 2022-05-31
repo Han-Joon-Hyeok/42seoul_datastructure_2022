@@ -23,6 +23,7 @@ void	linkedGraphDfs(LinkedGraph *pGraph)
 {
     int visit[pGraph->maxVertexCount];
 
+	printf("✅ array graph traversal by DFS\n");
     for (int i = 0; i < pGraph->maxVertexCount; i++)
 		visit[i] = NOT_VISITED;
 	visit[0] = VISITED;
