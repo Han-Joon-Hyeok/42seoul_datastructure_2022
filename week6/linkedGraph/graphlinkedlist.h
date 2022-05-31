@@ -28,6 +28,7 @@ int removeEdgeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
 int removeEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
 void deleteLinkedGraph(LinkedGraph* pGraph);
 void displayLinkedGraph(LinkedGraph* pGraph);
+void	linkedGraphDfs(LinkedGraph *pGraph);
 
 #endif
 
@@ -46,5 +47,8 @@ void displayLinkedGraph(LinkedGraph* pGraph);
 
 #define GRAPH_UNDIRECTED	1
 #define GRAPH_DIRECTED		2
+
+#define VISITED			1
+#define NOT_VISITED		0
 
 #endif
