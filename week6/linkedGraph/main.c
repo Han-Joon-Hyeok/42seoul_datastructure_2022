@@ -33,6 +33,8 @@ int main(void)
     addEdgeLG(ugraph, 1, 2);
     addEdgeLG(ugraph, 1, 3);
     displayLinkedGraph(ugraph);
+    linkedGraphDfs(ugraph);
+    linkedGraphBfs(ugraph);
 
 /*
 
@@ -48,8 +50,6 @@ int main(void)
 */
     dgraph = createLinkedDirectedGraph(4);
 
-    displayLinkedGraph(dgraph);
-
     addVertexLG(dgraph, 0);
     addVertexLG(dgraph, 1);
     addVertexLG(dgraph, 2);
@@ -61,6 +61,9 @@ int main(void)
     addEdgeLG(dgraph, 3, 1);
 
     displayLinkedGraph(dgraph);
+    linkedGraphDfs(dgraph);
+    linkedGraphBfs(dgraph);
+
     deleteLinkedGraph(ugraph);
     deleteLinkedGraph(dgraph);
     return (0);
