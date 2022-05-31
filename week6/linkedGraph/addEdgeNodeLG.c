@@ -26,5 +26,6 @@ int addEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID)
         pGraph->ppAdjEdge[fromVertexID]->headerNode.pLink = currNode;
     else
         prevNode->pLink = currNode;
+    pGraph->ppAdjEdge[fromVertexID]->currentElementCount += 1;
     return (SUCCESS);
 }
