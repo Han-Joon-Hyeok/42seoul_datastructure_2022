@@ -29,6 +29,7 @@ int removeEdgeNodeLG(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
 void deleteLinkedGraph(LinkedGraph* pGraph);
 void displayLinkedGraph(LinkedGraph* pGraph);
 void	linkedGraphDfs(LinkedGraph *pGraph);
+void	linkedGraphBfs(LinkedGraph *pGraph);
 
 #endif
 
