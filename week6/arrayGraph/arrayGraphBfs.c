@@ -12,7 +12,7 @@ void arrayGraphBfs(ArrayGraph *pGraph)
     i = 0;
     for (int k = 0; k < pGraph->maxVertexCount; k++)
         visit[k] = NOT_VISITED;
-    queue = createLinkedQueue(pGraph->maxVertexCount);
+    queue = createLinkedQueue();
     element.data = pGraph->ppAdjEdge[0][0];
     enqueueLQ(queue, element);
     while (isLinkedQueueEmpty(queue) == FALSE)
@@ -23,7 +23,8 @@ void arrayGraphBfs(ArrayGraph *pGraph)
         visit[i] = VISITED;
         for (int j = 0; j < pGraph->maxVertexCount; j++)
         {
-            if (pGraph->ppAdjEdge[i][j] >= 1 && visit[j] == NOT_VISITED)
+            if (pGraph->ppAdjEdge[i][j] >= 1 && visit[j] == NOT_VISITED \
+                && getLinkedNode(queue, j) == NULL)
             {
                 element.data = j;
                 enqueueLQ(queue, element);
