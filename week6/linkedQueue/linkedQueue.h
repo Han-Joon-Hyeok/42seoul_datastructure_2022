@@ -22,6 +22,7 @@ int dequeueLQ(LinkedQueue* pQueue);
 LinkedQueueNode *peekLQ(LinkedQueue* pQueue);
 void deleteLinkedQueue(LinkedQueue** pQueue);
 int isLinkedQueueEmpty(LinkedQueue* pQueue);
+LinkedQueueNode *getLinkedNode(LinkedQueue *pQueue, int data);
 
 #endif
 
