@@ -1,20 +1,15 @@
 #include "linkedlist.h"
 
-ListNode* getLLElement(LinkedList* pList, int position)
+ListNode* getLLElement(LinkedList* pList, int data)
 {
-	int	listLength;
-	int	i;
-		
 	ListNode* currNode;
-	listLength  = getLinkedListLength(pList);
-	if ( position < 0 || position > listLength - 1)
-		return (NULL);
+
 	currNode = pList->headerNode.pLink;	
-	i = 0;
-	while(i < position)
+	while(currNode != NULL)
 	{
+		if (currNode->data.vertexID == data)
+			return (currNode);
 		currNode = currNode->pLink;
-		i++;
 	}
-	return (currNode);
+	return (NULL);
 }
