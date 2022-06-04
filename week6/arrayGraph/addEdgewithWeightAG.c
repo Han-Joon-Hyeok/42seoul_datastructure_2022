@@ -5,12 +5,12 @@ int addEdgewithWeightAG(ArrayGraph* pGraph, int fromVertexID, int toVertexID, in
 {
     if (pGraph == NULL || weight <= 0)
         return (ERROR);
-    if (!checkVertexValid(pGraph, fromVertexID))
+    if (fromVertexID < 0 || fromVertexID > pGraph->maxVertexCount - 1 || pGraph->pVertex[fromVertexID] == NOT_USED)
     {
         printf("fromVertexID is not valid!\n");
         return (ERROR);
     }
-    if (!checkVertexValid(pGraph, toVertexID))
+    if (toVertexID < 0 || toVertexID > pGraph->maxVertexCount - 1 || pGraph->pVertex[toVertexID] == NOT_USED)
     {
         printf("toVertexID is not valid!\n");
         return (ERROR);
