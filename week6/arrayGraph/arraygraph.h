@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 
+
 typedef struct ArrayGraphType
 {
 	int maxVertexCount;
@@ -27,6 +28,10 @@ void displayArrayGraph(ArrayGraph* pGraph);
 void arrayGraphDfs(ArrayGraph *pGraph);
 void arrayGraphBfs(ArrayGraph *pGraph);
 
+// get shortest path
+void	floyd(ArrayGraph *pGraph);
+void	dijkstra(ArrayGraph *pGraph);
+
 #endif
 
 #ifndef _COMMON_GRAPH_DEF_
@@ -47,4 +52,6 @@ void arrayGraphBfs(ArrayGraph *pGraph);
 
 #define VISITED				1
 #define NOT_VISITED			0
+
+#define INFINITY			10000000
 #endif
