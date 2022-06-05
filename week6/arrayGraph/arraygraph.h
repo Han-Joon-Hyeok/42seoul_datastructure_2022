@@ -31,6 +31,7 @@ void arrayGraphBfs(ArrayGraph *pGraph);
 // get shortest path
 void	floyd(ArrayGraph *pGraph);
 void	dijkstra(ArrayGraph *pGraph);
+void	kruskal(ArrayGraph *pGraph);
 
 #endif
 

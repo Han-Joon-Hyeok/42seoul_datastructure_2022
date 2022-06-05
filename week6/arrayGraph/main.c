@@ -71,7 +71,24 @@ int main(void)
         dist = [0, 2, 5, 7, 3]
     */
 
-    dijkstra(ugraph);
+    // dijkstra(ugraph);
+
+    /* 
+    {
+        {0, 2, 0, 0, 0},
+        {2, 0, 3, 0, 1},
+        {0, 3, 0, 5, 0},
+        {0, 0, 5, 0, 4},
+        {0, 1, 0, 4, 0}
+    }
+        크루스칼 알고리즘 최소 신장 트리
+    {
+        
+    }
+
+    */
+    printf("\n\n✅ kruskal \n\n");
+    kruskal(ugraph);
 
 /*
 
