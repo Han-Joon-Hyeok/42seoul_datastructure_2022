@@ -10,7 +10,10 @@ minHeapNode	*deleteminHeap(minHeap *Heap)
 
 	if (isHeapEmpty(Heap))
 		return (0);
-	item = &(Heap->pNode[1]);
+	item = malloc(sizeof(minHeapNode));
+	if (item == NULL)
+		return (NULL);
+	*item = Heap->pNode[1];
 	temp = &(Heap->pNode[Heap->currentElementCount]);
 	Heap->currentElementCount--;
 	parent = 1;

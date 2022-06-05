@@ -1,6 +1,8 @@
 #ifndef _HEAP_
 #define _HEAP_
 
+#include <stdlib.h>
+
 typedef struct	minHeapNodeType
 {
 	int	weight;
