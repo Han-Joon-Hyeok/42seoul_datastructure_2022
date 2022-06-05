@@ -13,6 +13,8 @@ void    kruskal(ArrayGraph *pGraph)
     
     // create empty MST
     mst = createArrayGraph(pGraph->currentVertexCount);
+    for (int i = 0; i < pGraph->currentVertexCount; i++)
+        addVertexAG(mst, i);
     edgeCount = pGraph->currentVertexCount - 1;
 
     // create minimum heap
@@ -40,13 +42,11 @@ void    kruskal(ArrayGraph *pGraph)
     while (isHeapEmpty(heap) == FALSE && edgeCount > 0)
     {
         node = deleteminHeap(heap);
-        if (visit[node->fromVertexId] == NOT_VISITED && visit[node->toVertexId] == NOT_VISITED)
-        {
-            visit[node->fromVertexId] = VISITED;
-            visit[node->toVertexId] = VISITED;
-            addEdgewithWeightAG(mst, node->fromVertexId, node->toVertexId, node->weight);
-            edgeCount -= 1;
-        }
+        if (visit[node->fromVertexId] == VISITED && visit[node->toVertexId] == VISITED)
+            continue ;
+        visit[node->fromVertexId] = VISITED;
+        addEdgewithWeightAG(mst, node->fromVertexId, node->toVertexId, node->weight);
+        edgeCount -= 1;
     }
 
     // display minimum shortest tree
