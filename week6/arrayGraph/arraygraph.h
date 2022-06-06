@@ -32,6 +32,7 @@ void arrayGraphBfs(ArrayGraph *pGraph);
 void	floyd(ArrayGraph *pGraph);
 void	dijkstra(ArrayGraph *pGraph);
 void	kruskal(ArrayGraph *pGraph);
+void	prim(ArrayGraph *pGraph);
 
 #endif
 

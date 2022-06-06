@@ -83,9 +83,20 @@ int main(void)
             {0, 1, 0, 4, 0},
         }
     */
-    printf("\n\n✅ kruskal \n\n");
-    kruskal(ugraph);
+    // printf("\n\n✅ kruskal \n\n");
+    // kruskal(ugraph);
 
+    printf("\n\n✅ prim \n\n");
+    prim(ugraph);
+    /* 
+        {
+            {0, 2, 0, 0, 0},
+            {2, 0, 3, 0, 1},
+            {0, 3, 0, 5, 0},
+            {0, 0, 5, 0, 0},
+            {0, 1, 0, 0, 0},
+        }
+    */
 /*
 
     directed
