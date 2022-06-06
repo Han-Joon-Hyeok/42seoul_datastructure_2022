@@ -45,6 +45,7 @@ void    kruskal(ArrayGraph *pGraph)
         if (visit[node->fromVertexId] == VISITED && visit[node->toVertexId] == VISITED)
             continue ;
         visit[node->fromVertexId] = VISITED;
+        visit[node->toVertexId] = VISITED;
         addEdgewithWeightAG(mst, node->fromVertexId, node->toVertexId, node->weight);
         edgeCount -= 1;
     }
