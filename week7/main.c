@@ -7,6 +7,8 @@ int	main(void)
 
 	// selectionSort(data, size);
 	// bubbleSort(data, size);
-	quickSort(data, size);
+	// quickSort(data, size);
+	//insertionSort(data, size);
+	shellSort(data, size);
 	return (0);
 }
