@@ -2,7 +2,7 @@ NAME = test
 
 CC = gcc
 #CFLAGS := -Wall -Wextra -Werror
-#CFLAGS := -fsanitize=address -g
+CFLAGS := -fsanitize=address -g
 
 #INCS = -I./heap/MINHEAP/ -I./array_graph/
 
@@ -10,6 +10,8 @@ SRCS = main.c \
 		selectionSort.c \
 		bubbleSort.c \
 		quickSort.c \
+		insertionSort.c \
+		shellSort.c \
 		swap.c \
 		displayArray.c
 
