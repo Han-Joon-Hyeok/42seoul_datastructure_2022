@@ -18,7 +18,7 @@ void    quickSort(int *data, int size)
     {
         if (data[left] < pivot)
             left += 1;
-        if (data[right] >= pivot)
+        else if (data[right] >= pivot)
             right -= 1;
         if (pivot < data[left] && pivot > data[right])
             swap(data, left, right);
